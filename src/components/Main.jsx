@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Image from "../assets/Image1.png";
 import Vector1 from "../assets/Vector 1.png";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 const MainContainer = styled.div`
   width: 100%;
@@ -35,12 +36,13 @@ const Banner = styled.span`
   justify-content: center;
 `;
 
-const ClassRoomButton = styled.div`
+const ClassRoomButton = styled(Link)`
   height: 10rem;
   width: 16rem;
   position: relative;
   top: -80%;
   left: 6%;
+  display: block;
   background-color: #e8e19e;
   text-align: center;
   font-size: 1.5rem;
@@ -50,6 +52,7 @@ const ClassRoomButton = styled.div`
   border-radius: 10px;
   border: 3px solid #6b381b;
   box-shadow: inset 3px -2px 15px #2e190b;
+  text-decoration: none;
   & img {
     width: 10rem;
     margin-top: 30px;
@@ -66,11 +69,13 @@ const Main = () => {
           solution for <br /> all your study mates.
         </span>
       </Banner>
-      <ClassRoomButton>
-        <img src={Vector1}></img>
-        <br />
-        Enter Classroom
-      </ClassRoomButton>
+
+          <ClassRoomButton to="/classroom">
+            <img src={Vector1}></img>
+            <br />
+            Enter Classroom
+          </ClassRoomButton>
+
     </MainContainer>
   );
 };
