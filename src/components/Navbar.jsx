@@ -10,7 +10,6 @@ opacity: 1;
 height: 3.9rem;
 `
 
-
 const Navbar = () => {
   return (
     <NavColor>
