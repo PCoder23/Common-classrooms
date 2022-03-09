@@ -1,16 +1,18 @@
 import React from "react";
 import Main from "./components/Main";
-import Navbar from "./components/Navbar";
 
-
-
-
+import { Routes, Route } from "react-router-dom";
+import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Main />
+      <Routes>
+        <Route path="/" element={<Main />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signup" element={<SignUp />}></Route>
+      </Routes>
     </>
   );
 }

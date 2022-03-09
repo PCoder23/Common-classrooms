@@ -5,7 +5,7 @@ const Btn = styled.button`
   position: relative;
   border-radius: 10px;
   border-color: #d9c46a;
-  left: 83vw;
+  left: 80vw;
   height: 3vw;
   width: 6vw;
   margin: 10px 10px;
