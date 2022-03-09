@@ -1,21 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Login from "../Pages/Login";
 import Button from "./Button";
 
-
-
-const NavColor= styled.div`
-background-color: #d9c46a;
-opacity: 1;
-height: 3.9rem;
-`
+const NavComponent = styled.div`
+  background-color: #d9c46a;
+  opacity: 1;
+  height: 4rem;
+`;
+const NavBrand = styled.span`
+  margin-left: 20px;
+  font-size: 1.8rem;
+`;
 
 const Navbar = () => {
   return (
-    <NavColor>
-    <Button name="Login"/>
-    <Button name="SignUp"/>
-    </NavColor>
+    <NavComponent>
+      <NavBrand>CC</NavBrand>
+      <Link to="/login">{<Button name="Login" />}</Link>
+      <Link to="/signup">{<Button name="SignUp" />}</Link>
+    </NavComponent>
   );
 };
 

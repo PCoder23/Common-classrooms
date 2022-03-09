@@ -3,12 +3,14 @@ import styled from "styled-components";
 
 import Image from "../assets/Image1.png";
 import Vector1 from "../assets/Vector 1.png";
+import Navbar from "./Navbar";
+
 const MainContainer = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #f4fcd9;
 
-  & > :first-child {
+  .kawai-girl {
     position: relative;
     left: 30%;
     bottom: -19%;
@@ -42,20 +44,22 @@ const ClassRoomButton = styled.div`
   background-color: #e8e19e;
   text-align: center;
   font-size: 1.5rem;
-  color: #594F43;
+  font-weight: 800;
+  color: #594f43;
   cursor: pointer;
   border-radius: 10px;
   border: 3px solid #6b381b;
-  box-shadow: inset 3px -2px 9px #000;
-  & img{
-      width: 10rem;
-      margin-top: 30px;
+  box-shadow: inset 3px -2px 15px #2e190b;
+  & img {
+    width: 10rem;
+    margin-top: 30px;
   }
 `;
 const Main = () => {
   return (
     <MainContainer>
-      <img src={Image}></img>
+      <Navbar />
+      <img className="kawai-girl" src={Image}></img>
       <Banner>
         <span>
           👋 Hello, welcome to <br /> common classroom. <br /> A one stop
