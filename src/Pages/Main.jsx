@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import Image from "../assets/Image1.png";
+import Image from "../assets/Image.png";
 import Vector1 from "../assets/Vector 1.png";
-import Navbar from "./Navbar";
+
+import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const MainContainer = styled.div`
   width: 100%;
@@ -12,9 +14,9 @@ const MainContainer = styled.div`
 
   .kawai-girl {
     position: relative;
-    left: 30%;
-    bottom: -19%;
-    height: 70%;
+    left: 5%;
+    bottom: -10%;
+    height: 80%;
   }
 `;
 const Banner = styled.span`
@@ -23,8 +25,8 @@ const Banner = styled.span`
   height: 150px;
   width: 300px;
   background-color: #ffe0bb;
-  left: 70%;
-  top: -60%;
+  left: 72%;
+  top: -73%;
   font-family: "Comic Neue", cursive;
   border-radius: 10px;
   border: 2px solid #403930;
@@ -35,12 +37,13 @@ const Banner = styled.span`
   justify-content: center;
 `;
 
-const ClassRoomButton = styled.div`
+const ClassRoomButton = styled(Link)`
   height: 10rem;
   width: 16rem;
   position: relative;
-  top: -80%;
-  left: 6%;
+  top: -85%;
+  left: 3%;
+  display: block;
   background-color: #e8e19e;
   text-align: center;
   font-size: 1.5rem;
@@ -50,6 +53,7 @@ const ClassRoomButton = styled.div`
   border-radius: 10px;
   border: 3px solid #6b381b;
   box-shadow: inset 3px -2px 15px #2e190b;
+  text-decoration: none;
   & img {
     width: 10rem;
     margin-top: 30px;
@@ -66,11 +70,13 @@ const Main = () => {
           solution for <br /> all your study mates.
         </span>
       </Banner>
-      <ClassRoomButton>
-        <img src={Vector1}></img>
-        <br />
-        Enter Classroom
-      </ClassRoomButton>
+
+          <ClassRoomButton to="/classroom">
+            <img src={Vector1}></img>
+            <br />
+            Enter Classroom
+          </ClassRoomButton>
+        
     </MainContainer>
   );
 };
