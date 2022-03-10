@@ -121,7 +121,7 @@ const Login = () => {
         <h2>Log In</h2>
         <label>Username/Email Id:</label> <input></input>
         <label>Password:</label> <input type={"Password"}></input>
-        <Go to="/home">
+        <Go to="/classroom">
           <h2 className="AccLogin">Let's Go!</h2>
         </Go>
       </Form>
