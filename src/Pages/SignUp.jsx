@@ -1,16 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import school from "../assets/icegif-501.gif";
+import group1 from "../assets/istockphoto-165688784-612x612-removebg-preview.png";
+import group2 from "../assets/group-of-students-studying-vector-39889415-removebg-preview.png";
 
 
 const SignupPage = styled.div`
-background-color: #e8eaa5;
+  background-color: #e8eaa5;
   height: 100vh;
   width: 100%;
   font-family: "Comic Neue", cursive;
-`
+
+  & > .school {
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    height: 90vh;
+    width: 30vw;
+    border-radius: 10px;
+  }
+  & > .group1 {
+    position: absolute;
+    left: -3%;
+    bottom: 1vh;
+    height: 60%;
+    width: 40%;
+  }
+  & > .group2 {
+    position: absolute;
+    right: 0;
+    top: 1vh;
+    height: 30vw;
+    width: 30vw;
+  }
+`;
+
 const Form = styled.div`
-background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -28,37 +55,80 @@ background: rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   text-align: center;
 
-  &> input{
-      width: 20vw;
-      position: relative;
-      left: 15%;
-      height: 1.5rem;
+  & > input {
+    width: 20vw;
+    position: relative;
+    left: 15%;
+    height: 1.5rem;
   }
-`
+  & > h1 {
+    background: -webkit-linear-gradient(
+      45deg,
+      #de2e10,
+      #de9d10,
+      #de2e10,
+      #de9d10,
+      #de2e10
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  & h2 {
+    background: -webkit-linear-gradient(
+      45deg,
+      #de2e10,
+      #de9d10,
+      #de2e10,
+      #de9d10,
+      #de2e10
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+`;
 const SignUpBtn1 = styled.button`
-height: 8%; width: 25%; position: relative; left: 35%; font-size: 1rem; top: 2%; background: rgba(255, 255, 255, 0.25);
+  height: 8%;
+  width: 25%;
+  position: relative;
+  left: 35%;
+  font-size: 1rem;
+  top: 2%;
+  background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18); font-weight: 600;
-
-`
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-weight: 600;
+  background: -webkit-linear-gradient(
+    45deg,
+    #de2e10,
+    #de9d10,
+    #de2e10,
+    #de9d10,
+    #de2e10
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
 const SignUp = () => {
-    return(
-        <SignupPage>
-        <Form>
+  return (
+    <SignupPage>
+      <img className="school" src={school}></img>
+      <img className="group1" src={group1}></img>
+      <img className="group2" src={group2}></img>
+      <Form>
         <h1>Common Classroom</h1>
         <h2>Sign Up</h2>
         <label>Email Id:</label> <input></input>
+        <label>Password:</label> <input type={"Password"}></input>
         <label>Stream:</label> <input></input>
         <label>Grade/Class:</label> <input></input>
         <label>School/University Name:</label> <input></input>
-        <label>Password:</label> <input type={"Password"}></input>
-        <SignUpBtn1>SignUp now!</SignUpBtn1>
-        </Form>
-        </SignupPage>
-    );
-}
+        <SignUpBtn1>Sign up!</SignUpBtn1>
+      </Form>
+    </SignupPage>
+  );
+};
 
 export default SignUp;
