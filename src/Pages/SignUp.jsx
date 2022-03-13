@@ -86,12 +86,12 @@ const Form = styled.div`
     -webkit-text-fill-color: transparent;
   }
 `;
-const SignUpBtn1 = styled.button`
-  height: 8%;
+const SignUpBtn1 = styled(Link)`
+  height: 7%;
   width: 25%;
   position: relative;
   left: 35%;
-  font-size: 1rem;
+  font-size: 1.2rem;
   top: 2%;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -125,7 +125,7 @@ const SignUp = () => {
         <label>Stream:</label> <input></input>
         <label>Grade/Class:</label> <input></input>
         <label>School/University Name:</label> <input></input>
-        <SignUpBtn1>Sign up!</SignUpBtn1>
+        <SignUpBtn1 to="/classroom">Sign up!</SignUpBtn1>
       </Form>
     </SignupPage>
   );
