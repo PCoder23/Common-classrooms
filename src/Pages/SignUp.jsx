@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import school from "../assets/icegif-501.gif";
-import group1 from "../assets/istockphoto-165688784-612x612-removebg-preview.png";
-import group2 from "../assets/group-of-students-studying-vector-39889415-removebg-preview.png";
 
 
 const SignupPage = styled.div`
@@ -115,8 +113,6 @@ const SignUp = () => {
   return (
     <SignupPage>
       <img className="school" src={school}></img>
-      <img className="group1" src={group1}></img>
-      <img className="group2" src={group2}></img>
       <Form>
         <h1>Common Classroom</h1>
         <h2>Sign Up</h2>
