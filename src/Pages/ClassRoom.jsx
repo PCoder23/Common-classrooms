@@ -1,20 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Container from "../components/Container";
 
-const WhiteBoard = styled.div`
-position: relative;  width: 100%;  height: 100vh;  background-color: #f4fcd9;;
-`
-const Class = styled.div`
-height: 10vh; width: 100%; position: relative;
-`
+
+const MainContainer = styled.div`
+  background-color: #e8f7b4;
+  height: 100vh;
+`;
+
 const ClassRoom = () => {
-    return(
-        <WhiteBoard>
-        <h1>Welcome to your ClassRoom</h1>
-        <Class></Class>
-        </WhiteBoard>
-    );
-}
+  return (
+    <MainContainer>
+      <Container/>
+    </MainContainer>
+  );
+};
 
 export default ClassRoom;
