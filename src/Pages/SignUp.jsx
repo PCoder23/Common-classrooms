@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import school from "../assets/icegif-501.gif";
-
+import steve from "../assets/steve-harvey-speechless.gif";
 
 const SignupPage = styled.div`
   background-color: #e8eaa5;
@@ -113,6 +113,7 @@ const SignUp = () => {
   return (
     <SignupPage>
       <img className="school" src={school}></img>
+      <img className="group1" src={steve}></img>
       <Form>
         <h1>Common Classroom</h1>
         <h2>Sign Up</h2>
