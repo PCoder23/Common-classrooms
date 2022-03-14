@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import school from "../assets/icegif-501.gif";
-import group1 from "../assets/istockphoto-165688784-612x612-removebg-preview.png";
-import group2 from "../assets/group-of-students-studying-vector-39889415-removebg-preview.png";
 
 
 const SignupPage = styled.div`
@@ -86,12 +84,12 @@ const Form = styled.div`
     -webkit-text-fill-color: transparent;
   }
 `;
-const SignUpBtn1 = styled.button`
-  height: 8%;
+const SignUpBtn1 = styled(Link)`
+  height: 7%;
   width: 25%;
   position: relative;
   left: 35%;
-  font-size: 1rem;
+  font-size: 1.2rem;
   top: 2%;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -115,8 +113,6 @@ const SignUp = () => {
   return (
     <SignupPage>
       <img className="school" src={school}></img>
-      <img className="group1" src={group1}></img>
-      <img className="group2" src={group2}></img>
       <Form>
         <h1>Common Classroom</h1>
         <h2>Sign Up</h2>
@@ -125,7 +121,7 @@ const SignUp = () => {
         <label>Stream:</label> <input></input>
         <label>Grade/Class:</label> <input></input>
         <label>School/University Name:</label> <input></input>
-        <SignUpBtn1>Sign up!</SignUpBtn1>
+        <SignUpBtn1 to="/classroom">Sign up!</SignUpBtn1>
       </Form>
     </SignupPage>
   );
