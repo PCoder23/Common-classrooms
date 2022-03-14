@@ -71,7 +71,7 @@ const Main = () => {
         </span>
       </Banner>
 
-          <ClassRoomButton to="/signup">
+          <ClassRoomButton to="/classroom">
             <img src={Vector1}></img>
             <br />
             Enter Classroom
