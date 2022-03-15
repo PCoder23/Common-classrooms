@@ -1,4 +1,4 @@
-import rough from "roughjs/bundled/rough.esm";
+import rough from "roughjs";
 
 //A generator is a readonly property that lets you create a drawable object for a shape that can be later used with the draw method.
 const generator = rough.generator();
